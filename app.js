@@ -12,6 +12,7 @@ function agregarAmigo() {
     
     amigos.push(amigointroducido);
     limpiarCaja();  
+    console.log(listaAmigos);
     
 
     }   
@@ -37,6 +38,7 @@ function sortearAmigo(){
     }else {
     numeroMaximo = amigos.length;
     let numeroGenerado =  Math.floor(Math.random()*numeroMaximo)+1;
-    recorreramigos(numeroGenerado);
+    x = recorreramigos(numeroGenerado);
+    print (x);
     }
 }
