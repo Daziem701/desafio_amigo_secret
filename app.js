@@ -11,8 +11,10 @@ function agregarAmigo() {
     
     
     amigos.push(amigointroducido);
+    listaAmigos();
+
     limpiarCaja();  
-    console.log(listaAmigos);
+    
     
 
     }   
@@ -20,17 +22,18 @@ function agregarAmigo() {
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
+
+function listamigos('li') {
+    listamigos.innerHTML = amigointroducido;
+    listamigos.innerHTML = ""
+    
+}
 function RecorreAmigos(let recorre) {
     for (let i = 0; i < recorre; i++) {
         return amigos(i);
         
     }
 
-}
-function listamigos('li') {
-    listamigos.innerHTML = amigointroducido;
-    listamigos.innerHTML = ""
-    
 }
 function sortearAmigo(){
     if amigos.length = 0{
