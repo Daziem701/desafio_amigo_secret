@@ -19,10 +19,21 @@ function agregarAmigo() {
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
-function RecorreAmigos() {
+function RecorreAmigos(let recorre) {
+    for (let i = 0; i < recorre; i++) {
+        return amigos(i);
+        
+    }
 
 }
-function recorreramigos('li') {
-    recorreramigos.innerHTML = amigointroducido;
+function listamigos('li') {
+    listamigos.innerHTML = amigointroducido;
+    listamigos.innerHTML = ""
+    
+}
+function sortearAmigo(){
+    numeroMaximo = amigos.length;
+    let numeroGenerado =  Math.floor(Math.random()*numeroMaximo)+1;
+    recorreramigos(numeroGenerado);
     
 }
