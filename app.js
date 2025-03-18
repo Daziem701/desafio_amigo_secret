@@ -1,47 +1,31 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-let amigos = []
-let amigointroducido = 0;
+let listaAmigos=[];
 
+ /* Funcion para agregar amigos */
 
-function agregarAmigo() {
-    amigointroducido = document.getElementById('amigo').value;
-    if (amigointroducido.trim() === "") {
-        alert("Por favor, inserte un nombre.");
+ function agregarAmigo(){
+    nombreAmigo=document.getElementById('amigo').value;
+    if(nombreAmigo==''){
+        alert('Por favor inserte un nombre valido');
     }else{
-    
-    
-    amigos.push(amigointroducido);
-    listaAmigos();
+        listaAmigos.push(nombreAmigo);
+        console.log(listaAmigos);
+        listaHTML=document.getElementById('listaAmigos');
+        listaHTML.innerHTML+=`<li>${listaAmigos[listaAmigos.length-1]}</li>`;
+    }
+ limpiarCajaTexto();
 
-    limpiarCaja();  
-    
-    
+ }
+ /* Funcion para sortear amigo */
+  function sortearAmigo(){
+    let numeroAleatorio=Math.floor(Math.random()*listaAmigos.length-1)+1;
+    console.log(numeroAleatorio);
+    resultadoHTML=document.getElementById('resultado');
+    resultadoHTML.innerHTML=`El amigo secreto es: ${listaAmigos[numeroAleatorio]}`;
+  }
 
-    }   
-}
-function limpiarCaja() {
+
+  /* Funcion limpiar */
+  function limpiarCajaTexto(){
     document.querySelector('#amigo').value = '';
-}
-
-function listamigos('li') {
-    listamigos.innerHTML = amigointroducido;
-    listamigos.innerHTML = ""
-    
-}
-function RecorreAmigos(let recorre) {
-    for (let i = 0; i < recorre; i++) {
-        return amigos(i);
-        
-    }
-
-}
-function sortearAmigo(){
-    if amigos.length = 0{
-        console.log("no tienes amigos");
-    }else {
-    numeroMaximo = amigos.length;
-    let numeroGenerado =  Math.floor(Math.random()*numeroMaximo)+1;
-    x = recorreramigos(numeroGenerado);
-    print (x);
-    }
-}
+  }
