@@ -32,8 +32,11 @@ function listamigos('li') {
     
 }
 function sortearAmigo(){
+    if amigos.length = 0{
+        console.log("no tienes amigos");
+    }else {
     numeroMaximo = amigos.length;
     let numeroGenerado =  Math.floor(Math.random()*numeroMaximo)+1;
     recorreramigos(numeroGenerado);
-    
+    }
 }
